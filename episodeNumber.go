@@ -34,6 +34,8 @@ func EpisodeNumber(text string) (string, error) {
 	}
 	text = strings.ReplaceAll(text, "1080", "")
 	text = strings.ReplaceAll(text, "720", "")
+	text = strings.ReplaceAll(text, "264", "")
+	text = strings.ReplaceAll(text, "265", "")
 	data := ClearYare(text)
 	datas := regexp.FindAllStringSubmatch(data, -1)
 	number := ClearNumber(datas)
