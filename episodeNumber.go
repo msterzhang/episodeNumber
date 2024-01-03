@@ -28,7 +28,7 @@ func ClearNumber(numbers [][]string) string {
 }
 
 func EpisodeNumber(text string) (string, error) {
-	regexp, err := regexp.Compile(`(\d{2,3})\D`)
+	regexp, err := regexp.Compile(`\D(\d{2,3})\D`)
 	if err != nil {
 		return "", err
 	}
